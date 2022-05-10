@@ -48,8 +48,8 @@ input {
     font-family: "Josefin Sans";
     width: 88%;
     margin: 0 auto;
-    height: 35px;
-    font-size: 12px;
+    height: 45px;
+    font-size: 13px;
 }
 
 .items-left {
@@ -59,13 +59,13 @@ input {
     border-radius: 0 0 5px 5px;
     width: 88%;
     margin: 0 auto 20px auto;
-    height: 35px;
+    height: 45px;
 }
 
 .items-left p {
     display: inline-block;
     font-family: "Josefin Sans";
-    font-size: 12px;
+    font-size: 13px;
     color:hsl(236, 9%, 61%)
 }
 
@@ -85,7 +85,7 @@ input {
     border-radius: 5px;
     width: 88%;
     margin: 0 auto;
-    height: 35px;
+    height: 45px;
 }
 
 .navigation ul {
@@ -98,6 +98,7 @@ input {
 }
 
 li {
+    background-color: hsl(0, 0%, 98%);
     list-style: none;
     display: inline-block;
     text-align: center;
@@ -105,6 +106,8 @@ li {
     font-size: 15px;
     text-decoration: none;
     margin: 0 8px 0 8px;
+    /* width: 85%; */
+    /* height: 45px; */
 }
 
 a {
