@@ -1,3 +1,10 @@
+body {
+    background-color: hsl(236, 33%, 92%);
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+
 .background-img {
     background: url("../images/bg-mobile-light.jpg");
     width:100%;
@@ -9,7 +16,7 @@
 
 h1 {
     /* border: 1px solid black; */
-    color: white;
+    color: hsl(0, 0%, 98%);
     font-family:"Josefin Sans";
     font-weight: 700;
     text-transform: uppercase;
@@ -25,13 +32,58 @@ h1 span {
 }
 
 .todo-input {
+    background: hsl(0, 0%, 98%);
+    border-radius: 2.5px;
+    border-color: hsl(0, 0%, 98%);
     display: block;
     font-family: "Josefin Sans";
     width: 90%;
     margin: 0 auto;
-    height: 25px;
+    height: 35px;
+    font-size: 12px;
 }
 
-.todo-input[placeholder="Create a new todo..."] {
-    font-size: 15px;
+.items-left {
+    background-color: hsl(0, 0%, 98%);
+    border-radius: 2.5px;
+    border: 1px solid hsl(0, 0%, 98%);
+    border-radius: 0 0 5px 5px;
+    width: 90%;
+    margin: 0 auto;
+    height: 35px;
 }
+
+.navigation {
+    background-color: hsl(0, 0%, 98%);
+    border-radius: 2.5px;
+    border: 1px solid hsl(0, 0%, 98%);
+    border-radius: 5px;
+    width: 90%;
+    margin: 0 auto;
+    height: 35px;
+}
+
+.navigation ul {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+    font-family: "Josefin Sans";
+    font-size: 15px;
+    text-decoration: none;
+    margin: 0 8px 0 8px;
+}
+
+a {
+    color:hsl(236, 9%, 61%);
+    text-decoration: none;
+}
+ 
