@@ -22,44 +22,69 @@
 </head>
 <body>
   <div class="background-img"></div>
-  <div class="header">
-    <h1>Todo <span><img src="./images/icon-sun.svg"></span></h1>
-    <input class="todo-input" type="text" placeholder=" Create a new todo...">
+  <div class="content">
+    <div class="header">
+      <h1>Todo <span><img src="./images/icon-sun.svg"></span></h1>
+      <input class="todo-input" type="text" placeholder=" Create a new todo...">
+    </div>
+    <!--todo item styles  -->
+    <ul class="list-item-container">
+
+      <li class="list-item">
+        <input class="test" type="checkbox" id="test-item1">
+        <label for="test-item1">Test thing</label>
+        <span class="close">
+          <img src="./images/icon-cross.svg">
+        </span>
+      </li>
+
+      <li class="list-item">
+        <input class="test" type="checkbox" id="test-item2">
+        <label for="test-item2">Test thing</label>
+        <span class="close">
+          <img src="./images/icon-cross.svg">
+        </span>
+      </li>
+
+      <li class="list-item">
+        <input class="test" type="checkbox" id="test-item3">
+        <label for="test-item3">Test thing</label>
+        <span class="close">
+          <img src="./images/icon-cross.svg">
+        </span>
+      </li>
+
+      <li class="list-item">
+        <input class="test" type="checkbox" id="test-item3">
+        <label for="test-item3">Test thing</label>
+        <span class="close">
+          <img src="./images/icon-cross.svg">
+        </span>
+      </li>
+
+      <li class="list-item">
+        <input class="test" type="checkbox" id="test-item3">
+        <label for="test-item3">Test thing</label>
+        <span class="close">
+          <img src="./images/icon-cross.svg">
+        </span>
+      </li>
+
+      <li class="list-item">
+        <input class="test" type="checkbox" id="test-item3">
+        <label for="test-item3">Test thing</label>
+        <span class="close">
+          <img src="./images/icon-cross.svg">
+        </span>
+      </li>
+    </ul>
+
+    <!-- Add dynamic number --> 
+    <div class="items-left">
+      <p id="item-num">0 items left</p>
+      <p class="item-text" id="clear">Clear Completed</p>
+    </div>
   </div>
-  <!--todo item styles  -->
-  <ul class="list-item-container">
-
-    <li class="list-item">
-      <input class="test" type="checkbox" id="test-item1">
-      <label for="test-item1">Test thing</label>
-      <span class="close">
-        <img src="./images/icon-cross.svg">
-      </span>
-    </li>
-
-    <li class="list-item">
-      <input class="test" type="checkbox" id="test-item2">
-      <label for="test-item2">Test thing</label>
-      <span class="close">
-        <img src="./images/icon-cross.svg">
-      </span>
-    </li>
-
-    <li class="list-item">
-      <input class="test" type="checkbox" id="test-item3">
-      <label for="test-item3">Test thing</label>
-      <span class="close">
-        <img src="./images/icon-cross.svg">
-      </span>
-    </li>
-  </ul>
-
-  <!-- Add dynamic number --> 
-  <div class="items-left">
-    <p id="item-num">0 items left</p>
-    <p class="item-text" id="clear">Clear Completed</p>
-  </div>
-
 
   <!-- undfinished navigation -->
   <!-- <div class="navigation">

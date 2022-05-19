@@ -19,6 +19,26 @@ body {
     z-index: -1;
 }
 
+@media only screen and  (min-width: 500px) {
+    .background-img {
+        background: url('../images/bg-desktop-light.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 250px;
+    }
+}
+
+.content {
+    max-width: 750px;
+}
+
+@media only screen and  (min-width: 500px) {
+    .content {
+        margin: 0 auto;
+    }
+}
+
 h1 {
     /* border: 1px solid black; */
     color: hsl(0, 0%, 98%);
@@ -53,6 +73,13 @@ h1 span {
     font-size: 13px;
 }
 
+@media only screen and  (min-width: 500px) {
+    .header input {
+        height: 55px;
+        font-size: 15px;
+    }
+}
+
 
 /* list item styles */
 .list-item-container {
@@ -74,6 +101,14 @@ h1 span {
     height: 45px;
 }
 
+@media only screen and  (min-width: 500px) {
+    .list-item-container li {
+        height: 55px;
+        line-height: 4;
+        font-size: 15px;
+    }
+}
+
 .list-item:nth-child(1){
     border-radius: 5px 5px 0 0; /* this ruleset makes the first li element have rounded borders */
 }
@@ -81,8 +116,7 @@ h1 span {
 .list-item input {
     appearance: none;
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    vertical-align: middle;
     border: 1px solid black;
     margin-left: 10px;
     border-radius: 50%;
@@ -120,19 +154,41 @@ h1 span {
 }
 
 .items-left p {
-    display: inline-block;
+    display: block;
     font-family: "Josefin Sans";
     font-size: 13px;
     color:hsl(236, 9%, 61%)
 }
 
 .item-text {
+    display: block;
     float: right;
     margin-right: 20px;
 }
 
 #item-num {
     margin-left: 20px;
+}
+
+@media only screen and  (min-width: 500px) {
+    .items-left {
+        height: 55px;
+    }
+
+    #item-num {
+        position: relative;
+        top:50%;
+        transform: translateY(-50%);
+        margin: 0 0 0 20px;
+    }
+
+    #clear {
+        position: relative;
+        top:50%;
+        transform: translateY(-150%);
+        /* vertical-align: middle; */
+        margin: 0 20px 0 0;
+    }
 }
 
 
