@@ -98,6 +98,16 @@ h1 span {
     background-position: center;
 }
 
+/* cross styles */
+.close {
+    float: right;
+    margin-right: 20px;
+}
+
+.close img {
+    vertical-align: middle;
+}
+
 /* items-left styles */
 .items-left {
     background-color: hsl(0, 0%, 98%);
