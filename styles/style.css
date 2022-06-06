@@ -136,6 +136,7 @@ h1 span {
 .close {
     float: right;
     margin-right: 20px;
+    cursor: pointer;
 }
 
 .close img {
