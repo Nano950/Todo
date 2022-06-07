@@ -25,8 +25,8 @@
   <div class="content">
     <div class="header">
       <h1>Todo <span><img src="./images/icon-sun.svg"></span></h1>
-      <form id="task-form">
-        <input id="todoInput" class="todo-input" type="text" name="text"placeholder=" Create a new todo...">
+      <form class="task-form">
+        <input class="todo-input" type="text" name="text"placeholder=" Create a new todo...">
       </form>
     </div>
     <!--todo item styles  -->
@@ -34,7 +34,7 @@
 
       <li class="list-item">
         <input class="test" type="checkbox" id="test-item1">
-        <label class = "test-item-1">Test thing</label>
+        <label class = "test-item-1" for="test-item1" >Test thing</label>
         
         <span class="close">
           <img src="./images/icon-cross.svg">
@@ -50,15 +50,8 @@
     </div>
   </div>
 
-  <!-- undfinished navigation -->
-  <!-- <div class="navigation">
-    <ul>
-      <li><a id="all" href="#">All</a></li>
-      <li><a href="#">Active</a></li> 
-      <li><a href="#">Completed</a></li>
-    </ul>
-  </div> -->
+ 
 
-  <script type="text/javascript" href="./script.js"></script> 
+  <script src="./script.js"></script> 
 </body>
 </html>
