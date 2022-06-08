@@ -14,44 +14,39 @@
   
   <title>Frontend Mentor | Todo app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <!-- <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style> -->
 </head>
 <body>
   <div class="background-img"></div>
+
   <div class="content">
     <div class="header">
       <h1>Todo <span><img src="./images/icon-sun.svg"></span></h1>
-      <form class="task-form">
-        <input class="todo-input" type="text" name="text"placeholder=" Create a new todo...">
+      <form class="task-form" name='task' method="post">
+        <input class="todo-input" type="text" name="inputText" placeholder=" Create a new todo...">
       </form>
     </div>
+
     <!--todo item styles  -->
-    <ul class="list-item-container">
+    <ul id="list-item-container">
 
-      <li class="list-item">
-        <input class="test" type="checkbox" id="test-item1">
-        <label class = "test-item-1" for="test-item1" >Test thing</label>
+      <!-- <li class="list-item">
+        <input class="check" type="checkbox" id="test-item1">
+        <label class = "test-item-1" for="test-item1" > <span>Test thing</span> </label>
         
-        <span class="close">
-          <img src="./images/icon-cross.svg">
-        </span>
-      </li>
+      </li> -->
+      <li class="list-item"></li>
 
-    </ul>
+    </ul> 
 
     <!-- Add dynamic number --> 
     <div class="items-left">
       <p id="item-num">0 items left</p>
       <p class="item-text" id="clear">Clear Completed</p>
-    </div>
+    
   </div>
 
  
 
-  <script src="./script.js"></script> 
+  <script src="./script.js" defer></script> 
 </body>
 </html>
