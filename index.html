@@ -21,21 +21,18 @@
   <div class="content">
     <div class="header">
       <h1>Todo <span><img src="./images/icon-sun.svg"></span></h1>
-      <form class="task-form" name='task' method="post">
-        <input class="todo-input" type="text" name="inputText" placeholder=" Create a new todo...">
+      <form class="task-form">
+        <input  id="todo-input" class="todo-input" type="text" name="inputText" placeholder=" Create a new todo...">
       </form>
     </div>
-
     <!--todo item styles  -->
     <ul id="list-item-container">
 
-      <!-- <li class="list-item">
-        <input class="check" type="checkbox" id="test-item1">
+      <li class="list-item">
+        <input class="check" type="checkbox" >
         <label class = "test-item-1" for="test-item1" > <span>Test thing</span> </label>
-        
-      </li> -->
-      <li class="list-item"></li>
-
+        <span class="close"><img src = "./images/icon-cross.svg"></span>
+      </li>
     </ul> 
 
     <!-- Add dynamic number --> 

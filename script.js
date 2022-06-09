@@ -1,39 +1,47 @@
-window.addEventListener("load", () => {
-    // creates a close button for each list element
-    const nodeList = document.getElementsByTagName("LI");
-    let i;
-    for (i = 0; i < nodeList.length; i++) {
-        const span = document.createElement("SPAN");
-        span.setAttribute("class", "close");
-        span.innerHTML = `<img src="./images/icon-cross.svg">`;
-        nodeList[i].appendChild(span);
-    }
+let todoItems = [];
 
-    // remove list-item when close span is clicked
-    const close = document.querySelectorAll("close");
-    let j;
-    for (j = 0; j < close.length; j++) {
-        close[j].addEventListener("click", () => {
-            const div = this.parentElement;
-            div.style.display = "none";
-        });
+function addTodo(text) {
+    const todo = {
+      text,
+      checked: false,
+      id: Date.now(),
     };
+  
+    todoItems.push(todo);
+    renderTodo(todo);
+}
 
-    // add a checkbox and label to each list item
-    const label = document.createElement("LABEL");
-    const check = document.createElement("INPUT");
-    nodeList.array.forEach(element => {
-        label.setAttribute("")
-        element.appendChild(span);
-        element.appendChild(span);
-    });
 
-    console.log(nodeList);
-    
-    // add list-item element to the todo list 
-    document.forms["task"].addEventListener("submit", function(e) {
-        // prevent the form from reloading the page
-        e.preventDefault();
-
-    })
+const form = document.forms[0]; //might cause an error
+form.addEventListener('submit', event => {
+    event.preventDefault(event);
+    const input = document.getElementById('todo-input');
+    const text = input.value.trim();
+    if (text !== '') {
+        addTodo(text);
+        input.value = '';
+        input.focus();
+  }
 });
+
+function renderTodo(todo) {
+    const list = document.getElementById('list-item-container');
+    const isChecked = todo.checked ? 'done': '';
+    const node = document.createElement("li");
+
+    console.log(list);
+    console.log(node);
+
+    node.setAttribute('class', `list-item ${isChecked}`);
+    node.setAttribute('data-key', todo.id);
+    node.innerHTML = `
+    <input id="${todo.id}" type="checkbox" class="check"/>
+    <label for="${todo.id}" class="tick js-tick">
+    <span>${todo.text}</span>
+    </label>
+    <span class="close"><img src = "./images/icon-cross.svg"></span>
+
+  `;
+
+  list.append(node);
+}

@@ -82,6 +82,10 @@ h1 span {
 
 
 /* list item styles */
+.list-item label {
+    margin-left: 10px;
+}
+
 #list-item-container {
     width: 88%;
     padding: 0; 
@@ -101,6 +105,8 @@ h1 span {
     height: 45px;
 }
 
+
+
 @media only screen and  (min-width: 500px) {
     #list-item-container li {
         height: 55px;
@@ -109,7 +115,7 @@ h1 span {
     }
 }
 
-.list-item:nth-child(1){
+.list-item:nth-child(0){
     border-radius: 5px 5px 0 0; /* this ruleset makes the first li element have rounded borders */
 }
 
@@ -137,6 +143,7 @@ h1 span {
     float: right;
     margin-right: 20px;
     cursor: pointer;
+    display: block;
 }
 
 .close img {
