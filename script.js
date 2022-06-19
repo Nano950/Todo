@@ -24,13 +24,47 @@ form.addEventListener('submit', event => {
   }
 });
 
+
+
+const list = document.getElementById('list-item-container');
+list.addEventListener('click', event => {
+  if (event.target.classList.contains('js-tick')) {
+    const itemKey = event.target.parentElement.dataset.key;
+    toggleDone(itemKey);
+  }
+
+  if (event.target.classList.contains('js-delete-todo')) {
+    const itemKey = event.target.parentElement.dataset.key;
+    deleteTodo(itemKey);
+  }
+
+});
+
+function toggleDone(key) { //should NOT cross out text in todo item (it doesnt) ;-;
+  const index = todoItems.findIndex(item => item.id === Number(key));
+  todoItems[index].checked = !todoItems[index].checked;
+  renderTodo(todoItems[index]);
+}
+
+function deleteTodo(key) {
+  const index = todoItems.findIndex(item => item.id === Number(key));
+  const todo = {
+    deleted: true,
+    ...todoItems[index]
+  };
+  todoItems = todoItems.filter(item => item.id !== Number(key));
+  renderTodo(todo);
+}
+
 function renderTodo(todo) {
     const list = document.getElementById('list-item-container');
     const isChecked = todo.checked ? 'done': '';
     const node = document.createElement("li");
 
-    console.log(list);
-    console.log(node);
+    if (todo.deleted) {
+      item.remove();
+      return
+    }
 
     node.setAttribute('class', `list-item ${isChecked}`);
     node.setAttribute('data-key', todo.id);
@@ -45,3 +79,4 @@ function renderTodo(todo) {
 
   list.append(node);
 }
+
