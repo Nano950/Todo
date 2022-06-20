@@ -22,8 +22,6 @@ function renderTodo(todo) {
   <span class="close"><img class="js-delete-todo" src = "./images/icon-cross.svg"></span>
   `;
 
-  console.log(node);
-
   if (item) {
     list.replaceChild(node, item);
   } else {
