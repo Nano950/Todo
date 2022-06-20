@@ -115,7 +115,7 @@ h1 span {
     }
 }
 
-.list-item:nth-child(0){
+li:first-child {
     border-radius: 5px 5px 0 0; /* this ruleset makes the first li element have rounded borders */
 }
 
@@ -144,10 +144,12 @@ h1 span {
     margin-right: 20px;
     cursor: pointer;
     display: block;
+    z-index: 2;
 }
 
 .close img {
     vertical-align: middle;
+    z-index: -1;
 }
 
 /* items-left styles */

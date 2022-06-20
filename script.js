@@ -2,6 +2,8 @@ let todoItems = [];
 
 function renderTodo(todo) {
   const list = document.getElementById('list-item-container');
+  const item = document.querySelector(`[data-key='${todo.id}']`);
+
   const isChecked = todo.checked ? 'done': '';
   const node = document.createElement("li");
 
@@ -17,10 +19,16 @@ function renderTodo(todo) {
   <label for="${todo.id}" class="tick js-tick">
   <span>${todo.text}</span>
   </label>
-  <span class="close"><img src = "./images/icon-cross.svg"></span>
+  <span class="close"><img class="js-delete-todo" src = "./images/icon-cross.svg"></span>
   `;
 
-  list.append(node);
+  console.log(node);
+
+  if (item) {
+    list.replaceChild(node, item);
+  } else {
+    list.append(node);
+  }
 }
 
 function addTodo(text) {
@@ -50,7 +58,7 @@ function deleteTodo(key) {
   renderTodo(todo);
 }
 
-const form = document.forms[0]; //might cause an error
+const form = document.getElementById("task-form"); //might cause an error
 form.addEventListener('submit', event => {
   event.preventDefault(event);
   const input = document.getElementById('todo-input');
@@ -70,7 +78,7 @@ list.addEventListener('click', event => {
   }
 
   if (event.target.classList.contains('js-delete-todo')) {
-    const itemKey = event.target.parentElement.dataset.key;
+    const itemKey = event.target.parentElement.parentElement.dataset.key;
     deleteTodo(itemKey);
   }
 
